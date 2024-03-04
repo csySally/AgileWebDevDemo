@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sally Chen's 24S1 in UWA</h1>
+    <img src="./img/csy.jpeg" alt="Sally Chen" />
+    <ul>
+      <li>
+        <a href="https://handbooks.uwa.edu.au/unitdetails?code=CITS5505"
+          >CITS5505 - Agile Web Development</a
+        >
+      </li>
+      <li>
+        <a href="https://handbooks.uwa.edu.au/unitdetails?code=CITS5504"
+          >CITS5504 - Data Warehousing</a
+        >
+      </li>
+      <li>
+        <a href="https://handbooks.uwa.edu.au/unitdetails?code=GENG5505"
+          >GENG5505 - Project Management and Engineering Practice</a
+        >
+      </li>
+      <li>
+        <a href="https://handbooks.uwa.edu.au/unitdetails?code=GENG5507"
+          >GENG5507 - Risk, Reliability and Safety</a
+        >
+      </li>
+      <br />
+      <table border="1">
+        <!-- 6列10行 -->
+        <tr>
+          <td></td>
+          <td>Monday</td>
+          <td>Tuesday</td>
+          <td>Wednesday</td>
+          <td>Thursday</td>
+          <td>Friday</td>
+        </tr>
+        <tr>
+          <td>9:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td rowspan="2">CITS5505 Workshop</td>
+        </tr>
+        <tr>
+          <td>10:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12:00</td>
+          <td></td>
+          <td>GENG5505 Lecture</td>
+          <td>GENG5507 Practical Class</td>
+          <td>GENG5505 Lecture</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13:00</td>
+          <td></td>
+          <td></td>
+          <td rowspan="2">CITS5504 Lecture</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14:00</td>
+          <td rowspan="2">CITS5504 Lab</td>
+          <td></td>
+          <td rowspan="3">GENG5507 Workshop</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15:00</td>
+          <td>GENG5505 Practical Class</td>
+          <td rowspan="2">CITS5505 Lecture</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16:00</td>
+          <td rowspan="2">CITS5505 Lab</td>
+          <td rowspan="2">CITS5505 Lab</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <br />
+      <form action="#">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+        <br />
+        <label for="birth">Date of Birth</label>
+        <input type="date" name="birth" id="birth" />
+        <br />
+        <input type="submit" name="submit" id="submit" />
+      </form>
+    </ul>
+  </body>
+  <script>
+    const name = document.getElementById("username");
+    const email = document.getElementById("email");
+    const birth = document.getElementById("birth");
+    const submit = document.getElementById("submit");
+    submit.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (name.value === "" || email.value === "" || birth.value === "") {
+        alert("Please fill in all the fields");
+      } else {
+        alert("Submitted successfully!");
+      }
+    });
+  </script>
+</html>
